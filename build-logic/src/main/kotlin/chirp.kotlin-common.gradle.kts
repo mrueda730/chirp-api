@@ -1,8 +1,7 @@
-import libraries
+import gradle.kotlin.dsl.accessors._1ecb499e70f6c048b872e24ac296635d.dependencyManagement
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmProjectExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import kotlin.collections.addAll
 
 plugins {
     kotlin("jvm")
@@ -21,13 +20,13 @@ dependencyManagement {
 }
 
 configure<KotlinJvmProjectExtension> {
-    jvmToolchain(21)
+    jvmToolchain(25)
 }
 
 tasks.withType<KotlinCompile> {
     compilerOptions {
         freeCompilerArgs.addAll("-Xjsr305=strict", "-Xannotation-default-target=param-property")
-        jvmTarget = JvmTarget.JVM_21
+        jvmTarget = JvmTarget.JVM_25
     }
 }
 
