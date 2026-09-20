@@ -1,9 +1,11 @@
-package com.mrueda.user.domain.model
+package com.mrueda.chirp.domain.model
 
 import java.util.UUID
 
+typealias UserId = UUID
+
 data class User(
-    val id: UUID,
+    val id: UserId,
     val userName: String,
     val email: String,
     val hasEmailVerified: Boolean

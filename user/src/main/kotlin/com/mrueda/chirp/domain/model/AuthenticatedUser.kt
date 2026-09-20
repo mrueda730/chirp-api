@@ -1,4 +1,4 @@
-package com.mrueda.user.domain.model
+package com.mrueda.chirp.domain.model
 
 data class AuthenticatedUser(
     val user: User,
